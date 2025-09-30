@@ -1,0 +1,36 @@
+{
+  "name": "piggy-watt-opbnb",
+  "version": "1.0.0",
+  "description": "Piggy Watt system for opBNB chain",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network opbnb_testnet",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network opbnb_mainnet",
+    "verify": "npx hardhat verify --network opbnb_testnet",
+    "test": "npx hardhat test",
+    "mint:real:testnet": "npx hardhat run scripts/mint-to-address.js --network opbnb_testnet",
+    "mint:real:mainnet": "npx hardhat run scripts/mint-to-address.js --network opbnb_mainnet",
+    "node": "npx hardhat node"
+  },
+  "keywords": [
+    "blockchain",
+    "opbnb",
+    "erc20",
+    "points",
+    "piggy"
+  ],
+  "author": "PiggyCell",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
